@@ -7,10 +7,11 @@
     <style>
         body {
             width: 200px;
-            padding: 20px;
             background-color: #121212;
+            padding-left: 1rem;
+            padding-right: 2rem;
             color: #e0e0e0;
-            font-family: Arial, sans-serif;
+            font-family: 'Brush Script MT', cursive;
         }
 
         h1 {
@@ -75,25 +76,29 @@
 <body>
     <h1>X Light</h1>
     <label>
-        <input type="checkbox" id="hideTrends"> Hide Trends
+        <input type="checkbox" id="hideHeader">Hide Header
     </label>
     <label>
-        <input type="checkbox" id="hidePremium"> Hide Premium tab & button
+        <input type="checkbox" id="hidePremium">Hide Premium tab & button
     </label>
     <label>
-        <input type="checkbox" id="hideHeader"> Hide Header
+        <input type="checkbox" id="hideSuggestions">Hide Suggestions
     </label>
-    <button id="savePreferences">Save</button>
+    <label>
+        <input type="checkbox" id="hideTrends">Hide Trends
+    </label>
+    <button id="savePreferences">Save changes</button>
 
     <div class="footer">
         <a>You must refresh the tab to see the items again.</a>
         <br>
         <br>
-        <a href="https://twitter.com/Nevylish" class="open-source-link">Created by @Nevylish</a>
-        <br> 
-        <a href="https://www.buymeacoffee.com/nevylish" class="open-source-link">	&#9749; Buy Me a Coffee</a>
+        <a href="https://twitter.com/Nevylish" class="open-source-link">@Nevylish's X</a>
         -
-        <a href="https://github.com/Nevylish/X-Light" class="open-source-link">GitHub</a>
+        <a href="https://github.com/Nevylish/X-Light" class="open-source-link">GitHub Repository</a>
+        <br>
+        <br> 
+        <a href="https://www.buymeacoffee.com/nevylish" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
     </div>
 
     <script src="popup.js"></script>

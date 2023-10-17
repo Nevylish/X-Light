@@ -1,20 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const hideTrendsCheckbox = document.getElementById('hideTrends');
-    const hidePremiumCheckbox = document.getElementById('hidePremium');
     const hideHeaderCheckbox = document.getElementById('hideHeader');
+    const hidePremiumCheckbox = document.getElementById('hidePremium');
+    const hideSuggestionsCheckbox = document.getElementById('hideSuggestions');
+    const hideTrendsCheckbox = document.getElementById('hideTrends');
     const savePreferencesButton = document.getElementById('savePreferences');
 
-    browser.storage.local.get(['hideTrends', 'hidePremium', 'hideHeader'], function (result) {
-        hideTrendsCheckbox.checked = result.hideTrends;
-        hidePremiumCheckbox.checked = result.hidePremium;
+    browser.storage.local.get(['hideHeader', 'hidePremium', 'hideSuggestions', 'hideTrends'], function (result) {
         hideHeaderCheckbox.checked = result.hideHeader;
+        hidePremiumCheckbox.checked = result.hidePremium;
+        hideSuggestionsCheckbox.checked = result.hideSuggestions;
+        hideTrendsCheckbox.checked = result.hideTrends;
     });
 
     savePreferencesButton.addEventListener('click', function () {
         const preferences = {
-            hideTrends: hideTrendsCheckbox.checked,
+            hideHeader: hideHeaderCheckbox.checked,
             hidePremium: hidePremiumCheckbox.checked,
-            hideHeader: hideHeaderCheckbox.checked
+            hideSuggestions: hideSuggestionsCheckbox.checked,
+            hideTrends: hideTrendsCheckbox.checked
         };
 
         browser.storage.local.set(preferences, function () {
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     saveButton.addEventListener('click', function() {
         saveButton.innerHTML = '&#10004;';
         setTimeout(function() {
-            saveButton.innerHTML = 'Save';
+            saveButton.innerHTML = 'Save changes';
         }, 3000);
     });
 });
