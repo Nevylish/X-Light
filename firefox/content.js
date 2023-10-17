@@ -2,7 +2,7 @@ const applyUserPreferences = () => {
     browser.storage.local.get(['hideHeader', 'hidePremium', 'hideSuggestions', 'hideTrends'], (result) => {
     const selectors = {
         hideTrends: ['div.r-g2wdr4:nth-child(5)', 'a.css-1dbjc4n:nth-child(2)'],
-        hidePremium: ['div.r-g2wdr4:nth-child(3)', 'a.css-1dbjc4n:nth-child(7)'],
+        hidePremium: ['div.r-g2wdr4:nth-child(3)', 'a.css-1dbjc4n:nth-child(7)', 'a.css-4rbku5:nth-child(8)'],
         hideHeader: ['.r-1gn8etr > div:nth-child(1) > div:nth-child(1)', '.r-1ljd8xs > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2)'],
         hideSuggestions: ['div.r-g2wdr4:nth-child(4)']
     };
