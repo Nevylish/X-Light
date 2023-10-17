@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "X Light, enhance your e(X)perience",
+    "version": "1.1",
+    "description": "A browser extension to customize your experience on X by removing unwanted elements.",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://x.com/*", "https://twitter.com/*"],
+            "js": ["content.js", "popup.js"]
+        }
+    ]
+}
