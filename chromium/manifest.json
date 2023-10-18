@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "X Light, enhance your e(X)perience",
     "version": "1.0",
-    "description": "A browser extension to customize your experience on X by removing unwanted elements.",
+    "description": "An browser extension to customize your experience on X/Twitter by removing unwanted elements.",
     "permissions": [
         "activeTab",
         "storage"
